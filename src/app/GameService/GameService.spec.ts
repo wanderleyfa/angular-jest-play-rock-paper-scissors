@@ -4,33 +4,33 @@ import { Player } from "./Player";
 
 describe('GameService', () => {
 
-  it('testa o empate ', () => {
-      let _game = new Game(new Player('Primeiro Jogador'),new Player('Segundo Jogador'), "Rock", "Rock");
+  it('test the draw', () => {
+      let _game = new Game(new Player('First Player'),new Player('Second Player'), "Rock", "Rock");
       let _GameService = new GameService(_game).resultado;
       expect(_GameService).toBe('Draw');
   });
 
-  it('Rock ganha ', () => {
-      let _game = new Game(new Player('Primeiro Jogador'),new Player('Segundo Jogador'), "Rock", "Scissors");
+  it('rock wins ', () => {
+      let _game = new Game(new Player('First Player'),new Player('Second Player'), "Rock", "Scissors");
       let _GameService = new GameService(_game).resultado;
-      expect(_GameService).toBe('Primeiro Jogador win !');
+      expect(_GameService).toBe('First Player win !');
   });
 
-  it('Scissors Ganha ', () => {
-      let _game = new Game(new Player('Primeiro Jogador'),new Player('Segundo Jogador'), "Scissors", "Paper");
+  it('Scissors wins ', () => {
+      let _game = new Game(new Player('First Player'),new Player('Second Player'), "Scissors", "Paper");
       let _GameService = new GameService(_game).resultado;
-      expect(_GameService).toBe('Primeiro Jogador win !');
+      expect(_GameService).toBe('First Player win !');
   });
 
-  it('Paper ganha ', () => {
-      let _game = new Game(new Player('Primeiro Jogador'),new Player('Segundo Jogador'), "Rock", "Paper");
+  it('Paper wins ', () => {
+      let _game = new Game(new Player('First Player'),new Player('Second Player'), "Rock", "Paper");
       let _GameService = new GameService(_game).resultado;
-      expect(_GameService).toBe('Segundo Jogador win !');
+      expect(_GameService).toBe('Second Player win !');
   });
 
-  it('Scissors perde ', () => {
-      let _game = new Game(new Player('Primeiro Jogador'),new Player('Segundo Jogador'), "Scissors", "Rock");
+  it('Scissors lose ', () => {
+      let _game = new Game(new Player('First Player'),new Player('Second Player'), "Scissors", "Rock");
       let _GameService = new GameService(_game).resultado;
-      expect(_GameService).toBe('Segundo Jogador win !');
+      expect(_GameService).toBe('Second Player win !');
   });
 });
