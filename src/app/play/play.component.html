@@ -1,0 +1,57 @@
+<h2 class="text-2xl font-bold">
+    Rock, Paper, Scissors game
+</h2>
+
+<h2 class="text-1xl font-bold text-justify mb-16">
+The familiar game of Rock, Paper, Scissors is played like this: at the same time, two players
+display one of three symbols: a rock, paper, or scissors. A rock beats scissors, scissors beat paper by cutting it, and
+paper beats rock by covering it.
+</h2>
+<div class="card-container">
+    <div class="play-card mb-4">
+        <h1 class="text-2xl font-bold">the result is :</h1>
+        <h1 class="text-2xl font-bold text-red-800"> {{resultOfTheGame}}</h1>
+    </div>
+</div>
+
+<div >
+    <form (submit)="playGame()" onsubmit="return false">
+        <div class="card-container">
+            <div class="play-card mb-4">
+                <label  class="block text-gray-700 font-bold mb-2">Player One Name:</label>
+                <input required type="text" id="playerOne" name="playerOne" [(ngModel)]="playerOne"
+                    class="input-name">
+            </div>
+            <div class="play-card mb-4">
+                <label  class="block text-gray-700 font-bold mb-2">Move Player One:</label>
+                <select class="selector" name="movePlayerOne" [(ngModel)]="movePlayerOne" required>
+                    <option value="">Choose</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                </select>
+            </div>
+            <div class="play-card mb-4">
+                <label f class="block text-gray-700 font-bold mb-2">Player Two Name:</label>
+                <input required type="text" id="playerTwo" name="playerTwo" [(ngModel)]="playerTwo"
+                    class="input-name">
+            </div>
+            <div class="play-card mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Move Player Two:</label>
+                <select class="selector" name="movePlayerTwo" [(ngModel)]="movePlayerTwo" required>
+                    <option value="">Choose</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-container mb-32">
+            <button class="play-button"  >
+                Play
+            </button>
+            <a class="clear-button ml-16" (click)="clear()" >Clear</a>
+
+        </div>
+    </form>
+</div>

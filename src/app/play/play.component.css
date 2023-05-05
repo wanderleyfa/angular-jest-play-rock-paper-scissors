@@ -1,0 +1,39 @@
+.play-card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 310px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.selector {
+  @apply border border-gray-300 text-gray-900
+   text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500
+   block w-full p-2.5;
+}
+
+.play-button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold
+  py-2 px-4 rounded;
+}
+
+.clear-button {
+  @apply bg-orange-500 hover:bg-orange-700 text-white font-bold
+  py-2 px-4 rounded;
+}
+
+.input-name {
+  focus: outline-none;
+  focus: shadow-outline;
+  @apply shadow appearance-none border rounded w-full py-2
+    px-3 text-gray-700 leading-tight;
+}
