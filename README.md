@@ -18,7 +18,7 @@ Run `ng build` or `npm run build` to build the project. The build artifacts will
 
 Run `n` to execute the Jest tests via a platform of your choice. To use this command, you need to first add a package that implements Jest testing capabilities.
 
-![tests](src/assets/testests.png)
+![tests](https://github.com/wanderleyfa/angular-jest-play-rock-paper-scissors/blob/main/src/assets/tests.png)
 
 ## Further help
 
