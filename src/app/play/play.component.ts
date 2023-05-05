@@ -10,13 +10,11 @@ import { Game } from '../GameService/Game';
 })
 
 export class PlayComponent{
-  playerOne!: string ;
-  playerTwo!: string;
-  movePlayerOne!: string;
-  movePlayerTwo!: string;
+  playerOne: string  = 'Mario Mario';
+  playerTwo: string  = 'Luigi Mario';
+  movePlayerOne: string = 'Rock';
+  movePlayerTwo: string = 'Rock';
   resultOfTheGame!: string | Game;
-
-
 
   public playGame() {
     this.resultOfTheGame = new GameService(new Game(
